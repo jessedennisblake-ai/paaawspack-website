@@ -12,5 +12,5 @@ window.PAAAWS = {
   company: "PAAAWS LTD",     // use the name on the Companies House register on the day you publish
   companyNo: "16445356",
   office: "[REGISTERED OFFICE ADDRESS]",
-  ico: "[ICO NUMBER]"
+  ico: "ZC048445"
 };
