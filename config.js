@@ -7,7 +7,12 @@ window.PAAAWS = {
   whatsapp: "447479797985",  // 07479 797985 in international format, no + or spaces
   // Paste each Stripe Payment Link here once Stripe is set up.
   // While a link is empty, the Buy button opens WhatsApp with the order filled in.
-  stripe: { Black: "", Blue: "", Pink: "", Purple: "" },
+  stripe: {
+    Black:  "https://buy.stripe.com/6oUcN74ZQ6Hg1MbewQ1Jm00",
+    Blue:   "https://buy.stripe.com/9B67sNfEu0iS0I7fAU1Jm01",
+    Pink:   "https://buy.stripe.com/6oUcN71NEaXwfD10G01Jm02",
+    Purple: "https://buy.stripe.com/eVqdRb4ZQ8Po3Uj0G01Jm03"
+  },
   appLink: "https://jessedennisblake-ai.github.io/paaaws-pack/", // change to app.paaawspack.co.uk when moved
   company: "PAAAWS LTD",     // use the name on the Companies House register on the day you publish
   companyNo: "16445356",
