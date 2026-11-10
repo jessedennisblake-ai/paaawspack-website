@@ -233,3 +233,7 @@ main:has(> .shop),main:has(> .faq),main:has(> .how),main:has(> .features),main:h
 @media(max-height:820px){.tutorial-side{gap:5px}.tutorial-side a b{flex-basis:26px;height:26px;font-size:.74rem}}
 .tutorial-figure.guide-figure figcaption{display:none}
 @media(max-width:760px){.tutorial-figure.guide-figure figcaption{display:block}.tutorial-side a:not(.side-top){display:none}}
+
+.pets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1180px;margin:22px auto}.pets-grid .tutorial-figure{margin:0;max-width:none}.pets-grid img{aspect-ratio:auto!important;width:100%!important;max-width:none!important;max-height:none!important;height:auto!important}.pets-grid a{display:block}
+@media(max-width:900px){.pets-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.pets-grid{grid-template-columns:1fr}}
