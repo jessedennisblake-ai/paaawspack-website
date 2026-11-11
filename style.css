@@ -237,3 +237,8 @@ main:has(> .shop),main:has(> .faq),main:has(> .how),main:has(> .features),main:h
 .pets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1180px;margin:22px auto}.pets-grid .tutorial-figure{margin:0;max-width:none}.pets-grid img{aspect-ratio:auto!important;width:100%!important;max-width:none!important;max-height:none!important;height:auto!important}.pets-grid a{display:block}
 @media(max-width:900px){.pets-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.pets-grid{grid-template-columns:1fr}}
+
+.preorder-bar{display:block;text-align:center;padding:12px 16px;background:linear-gradient(90deg,#3a2a05,#7a5a10,#3a2a05);color:#ffd34a;text-decoration:none;border-bottom:1px solid #f8c44f;animation:pp-pulse 1.6s ease-in-out infinite}.preorder-bar strong{display:block;font-size:clamp(14px,3.6vw,20px);letter-spacing:.06em;font-weight:900}.preorder-bar span{display:block;font-size:13px;color:#fff;margin-top:3px}
+@keyframes pp-pulse{0%,100%{box-shadow:0 0 6px #f8c44f44;filter:brightness(1)}50%{box-shadow:0 0 26px #f8c44fcc;filter:brightness(1.35)}}
+@media(prefers-reduced-motion:reduce){.preorder-bar{animation:none}}
+.ship-note{margin:8px 0 0;color:#f5ce75;font-weight:800;font-size:14px;text-align:center}
