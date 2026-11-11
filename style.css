@@ -242,3 +242,5 @@ main:has(> .shop),main:has(> .faq),main:has(> .how),main:has(> .features),main:h
 @keyframes pp-pulse{0%,100%{box-shadow:0 0 6px #f8c44f44;filter:brightness(1)}50%{box-shadow:0 0 26px #f8c44fcc;filter:brightness(1.35)}}
 @media(prefers-reduced-motion:reduce){.preorder-bar{animation:none}}
 .ship-note{margin:8px 0 0;color:#f5ce75;font-weight:800;font-size:14px;text-align:center}
+
+.paw-ico{display:inline-block;width:1em;height:1em;vertical-align:-.12em}
