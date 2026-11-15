@@ -139,3 +139,23 @@
 
   const y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* Xmas special discount badge (auto-injected on every page) */
+(function(){
+  function makeBadge(){
+    try{
+      if(document.querySelector('.xmas-badge'))return;
+      var cur=document.querySelector('nav a[aria-current="page"]');
+      var isHome=!!(cur&&/index\.html/.test(cur.getAttribute('href')||''));
+      var spikes=22,pts=[];
+      for(var i=0;i<spikes*2;i++){var ang=Math.PI*i/spikes-Math.PI/2;var rad=(i%2===0)?98:80;pts.push((100+rad*Math.cos(ang)).toFixed(1)+','+(100+rad*Math.sin(ang)).toFixed(1));}
+      var a=document.createElement('a');
+      a.className='xmas-badge'+(isHome?' home':'');
+      a.href='shop.html';
+      a.setAttribute('aria-label','Xmas special: 27% off, now 40 pounds plus delivery');
+      a.innerHTML='<svg class="xmas-burst-svg" viewBox="0 0 200 200" aria-hidden="true"><polygon points="'+pts.join(' ')+'" fill="#c21f1f"></polygon><circle cx="100" cy="100" r="74" fill="#e2302f"></circle><circle cx="100" cy="100" r="74" fill="none" stroke="#f8c44f" stroke-width="4" stroke-dasharray="3 4"></circle></svg><span class="xmas-badge-text"><b class="xb-k">XMAS SPECIAL</b><b class="xb-pct">27%</b><b class="xb-off">OFF</b><b class="xb-price"><s>&pound;54.99</s> &pound;40</b><b class="xb-del">+ delivery</b></span>';
+      document.body.appendChild(a);
+    }catch(e){}
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',makeBadge);else makeBadge();
+})();
