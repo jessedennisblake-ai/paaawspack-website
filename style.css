@@ -272,3 +272,4 @@ main:has(> .shop),main:has(> .faq),main:has(> .how),main:has(> .features),main:h
 .xmas-badge.home .xb-price{font-size:13px}
 .xmas-badge.home .xb-del{font-size:11px}
 @media(max-width:600px){.xmas-badge{width:88px;height:88px;left:10px;bottom:10px}.xmas-badge.home{width:120px;height:120px}.xmas-badge.home .xb-pct{font-size:34px}}
+@media(min-width:601px){.xmas-badge{width:168px;height:168px}.xmas-badge.home{width:250px;height:250px}.xb-k{font-size:13px}.xb-pct{font-size:43px}.xb-off{font-size:17px}.xb-price{font-size:14px}.xb-del{font-size:11px}.xmas-badge.home .xb-k{font-size:16px}.xmas-badge.home .xb-pct{font-size:64px}.xmas-badge.home .xb-off{font-size:23px}.xmas-badge.home .xb-price{font-size:17px}.xmas-badge.home .xb-del{font-size:14px}}

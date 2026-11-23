@@ -2,8 +2,8 @@
 <html lang="en-GB"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-<title>Ordering | PAAAWS PACK</title>
-<meta content="PAAAWS PACK is a backpack with a full-colour 64×64 LED screen you control from your Android phone. Pictures, GIFs, moving text, games and an SOS flash. £40, UK delivery." name="description"/>
+<title>Reserve your pack | PAAAWS PACK</title>
+<meta content="Reserve your PAAAWS PACK LED backpack for the first limited run. Selling from 1st December. £40, UK delivery." name="description"/>
 <link href="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f8c44f'%3E%3Cellipse cx='12' cy='16.2' rx='5' ry='4.2'/%3E%3Cellipse cx='5.3' cy='10.4' rx='2.1' ry='2.6'/%3E%3Cellipse cx='9.4' cy='5.8' rx='2.1' ry='2.7'/%3E%3Cellipse cx='14.6' cy='5.8' rx='2.1' ry='2.7'/%3E%3Cellipse cx='18.7' cy='10.4' rx='2.1' ry='2.6'/%3E%3C/g%3E%3C/svg%3E" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -18,10 +18,48 @@
 <a href="how.html">How it works</a>
 <a href="faq.html">FAQs</a>
 <a href="contact.html">Contact</a>
-<a href="cart.html">🛒 Order</a></nav>
-</header><main><section class="contact"><p class="section-kicker">ORDER YOUR PACK</p><h1>YOUR <em>ORDER</em></h1><p>Choose your backpack colour on the Shop page. Ordering currently opens WhatsApp, or a secure Stripe payment link once configured.</p><p>Want it to last all day? Tick <strong>Add PAAAWS power bank</strong> (£15, up to 12 hours) under your bag on the Shop page.</p><a class="btn gold" href="shop.html">SHOP BACKPACKS →</a></section></main><a aria-label="Message us on WhatsApp" class="wa-float" data-wa="" href="#">WhatsApp us</a><footer class="foot">
+<a aria-current="page" href="cart.html">🛒 Order</a></nav>
+</header><main><section class="contact" id="reserve">
+<p class="section-kicker">FIRST LIMITED RUN</p><h1>RESERVE YOUR <em>PACK</em></h1>
+<p>Get your name on the list for the first limited run. Pop in your details below and we'll send you a <strong>reservation code within 24 hours</strong> confirming your PAAAWS Pack is held for you.</p>
+<div class="priv" style="border:1.5px dashed #ffc72c;border-radius:14px;padding:14px 18px;margin:18px 0;background:#121216">
+<b class="gold-text">How reserving works</b>
+<ul class="ticks" style="margin:10px 0 0">
+<li>Pop in your name, number and email below</li>
+<li>We send your reservation code within 24 hours confirming your pack is reserved</li>
+<li>Reserved packs must be <b>paid between 1st and 7th December</b> — after the 7th your reservation expires and the pack goes to the next person in line</li>
+</ul>
+</div>
+<form class="form" id="reserve-form">
+<label>Your name<input autocomplete="name" name="name" required=""/></label>
+<label>Phone number<input autocomplete="tel" name="phone" type="tel" required=""/></label>
+<label>Email<input autocomplete="email" name="email" type="email" required=""/></label>
+<label>Colour (optional)<select name="colour"><option value="">No preference</option><option>Black</option><option>Blue</option><option>Pink</option><option>Purple</option></select></label>
+<button class="btn gold" type="submit">Reserve on WhatsApp</button>
+</form>
+<p class="small">No payment now — reserving just holds your spot. You only pay when orders open on 1st December. 1st come, 1st served.</p>
+</section></main><a aria-label="Message us on WhatsApp" class="wa-float" data-wa="" href="#">WhatsApp us</a><footer class="foot">
 <div class="brand"><span aria-hidden="true" class="paw"><svg class="paw-ico" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><g fill="#f8c44f"><ellipse cx="12" cy="16.2" rx="5" ry="4.2"/><ellipse cx="5.3" cy="10.4" rx="2.1" ry="2.6"/><ellipse cx="9.4" cy="5.8" rx="2.1" ry="2.7"/><ellipse cx="14.6" cy="5.8" rx="2.1" ry="2.7"/><ellipse cx="18.7" cy="10.4" rx="2.1" ry="2.6"/></g></svg></span> PAAAWS PACK</div>
 <nav aria-label="Policies"><a href="policies.html">Terms, returns, delivery and privacy</a></nav>
 <p class="small"><span data-company="">PAAAWS LTD</span>, company no. <span data-companyno="">16445356</span>, registered in England and Wales. Registered office: <span data-office="">[REGISTERED OFFICE ADDRESS]</span>. ICO registration: <span data-ico="">[ICO NUMBER]</span>.</p>
 <p class="small">PAAAWS: Positive Actions And Assistance Supportive. © <span id="year">2026</span></p>
-</footer><script src="config.js"></script><script src="led.js"></script></body></html>
+</footer><script src="config.js"></script><script src="led.js"></script>
+<script>
+(function(){
+  var f=document.getElementById('reserve-form');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var wa=(window.PAAAWS&&window.PAAAWS.whatsapp)||'447479797985';
+    var el=f.elements;
+    var msg="Hi PAAAWS PACK, I'd like to RESERVE a PAAAWS Pack.\n"
+      +"Name: "+el['name'].value.trim()+"\n"
+      +"Phone: "+el['phone'].value.trim()+"\n"
+      +"Email: "+el['email'].value.trim()+"\n"
+      +"Colour: "+(el['colour'].value||'No preference')+"\n"
+      +"I understand I'll get my reservation code within 24 hours, and reserved packs are paid 1st-7th December.";
+    window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(msg),'_blank');
+  });
+})();
+</script>
+</body></html>
